@@ -11,7 +11,10 @@ const PORT = 3000;
 
 // Configuración de CORS
 app.use(cors({
-  origin: 'https://navdex.vercel.app'
+  origin: 'https://navdex.vercel.app', // Cambia esto al origen de tu frontend
+  credentials: true,
+  methods: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
+  allowedHeaders: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
 }));
 
 app.use(express.json());
