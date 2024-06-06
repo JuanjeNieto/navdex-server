@@ -10,7 +10,9 @@ const PORT = 3000;
 
 
 // Configuración de CORS
-app.use(cors());
+app.use(cors({
+  origin: 'https://navdex.vercel.app'
+}));
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
